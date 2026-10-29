@@ -22,9 +22,9 @@ Documentación técnica y registro de resolución de problemas para la configura
   * `password:` (10 espacios)
 
 ### 1.3 Error de direccionamiento en la Puerta de Enlace (Gateway)
-* **Problema:** La configuración asignaba inicialmente `via: 10.0.0.0` como ruta por defecto, dejando al servidor sin comunicación externa hacia internet.
-* **Causa:** `10.0.0.0` define la dirección base de la subred en una máscara `/24`, no una interfaz de enrutamiento válida.
-* **Solución:** Corrección del parámetro apuntando a la dirección IP real del router local: `10.0.0.1`.
+* **Problema:** La configuración asignaba inicialmente `via: x.x.x.x` como ruta por defecto, dejando al servidor sin comunicación externa hacia internet.
+* **Causa:** `x.x.x.x` define la dirección base de la subred en una máscara `/24`, no una interfaz de enrutamiento válida.
+* **Solución:** Corrección del parámetro apuntando a la dirección IP real del router local: `x.x.x.x`.
 
 ### 1.4 Advertencia de seguridad por permisos abiertos en Netplan
 * **Problema:** Advertencia en consola: `Permissions for /etc/netplan/*.yaml are too open. Netplan configuration should not be accessible by others`.
